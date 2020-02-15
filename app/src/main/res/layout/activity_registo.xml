@@ -6,10 +6,10 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".LoginActivity">
+    tools:context=".RegistoActivity">
 
     <EditText
-        android:id="@+id/et_login_email"
+        android:id="@+id/et_registo_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -17,25 +17,25 @@
         android:inputType="textEmailAddress" />
 
     <EditText
-        android:id="@+id/et_login_password"
+        android:id="@+id/et_registo_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:hint="Insira a password"
         android:inputType="textPassword" />
 
-    <Button
-        android:id="@+id/bt_login_entrar"
+    <EditText
+        android:id="@+id/et_registo_password1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Entrar" />
+        android:gravity="center"
+        android:hint="Repita a password"
+        android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/bt_login_registar"
+        android:id="@+id/bt_registo_registar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
         android:text="Registar" />
-
 
 </LinearLayout>
