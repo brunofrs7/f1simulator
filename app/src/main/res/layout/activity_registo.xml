@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:hint="Insira o email"
+        android:hint="@string/insira_o_email"
         android:inputType="textEmailAddress" />
 
     <EditText
@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:hint="Insira a password"
+        android:hint="@string/insira_a_password"
         android:inputType="textPassword" />
 
     <EditText
@@ -29,13 +29,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:hint="Repita a password"
+        android:hint="@string/repita_a_password"
         android:inputType="textPassword" />
 
     <Button
         android:id="@+id/bt_registo_registar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Registar" />
+        android:text="@string/registar" />
 
 </LinearLayout>

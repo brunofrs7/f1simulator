@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">f1simulator</string>
+    <string name="app_name">F1 Simulator</string>
+    <string name="insira_o_email">Insira o email</string>
+    <string name="insira_a_password">Insira a password</string>
+    <string name="entrar">Entrar</string>
+    <string name="registar">Registar</string>
+    <string name="repita_a_password">Repita a password</string>
+    <string name="piloto">Piloto</string>
+    <string name="equipa">Equipa</string>
+    <string name="circuito">Circuito</string>
+    <string name="simulador">Simulador</string>
 </resources>

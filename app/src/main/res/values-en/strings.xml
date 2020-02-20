@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">F1 Simulator</string>
+    <string name="insira_o_email">Insert email</string>
+    <string name="insira_a_password">Insert password</string>
+    <string name="entrar">Enter</string>
+    <string name="registar">Register</string>
+    <string name="repita_a_password">Repeat password</string>
+    <string name="piloto">Pilot</string>
+    <string name="equipa">Team</string>
+    <string name="circuito">Race</string>
+    <string name="simulador">Simulator</string>
+</resources>
