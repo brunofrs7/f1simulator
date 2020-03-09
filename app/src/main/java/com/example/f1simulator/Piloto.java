@@ -3,37 +3,32 @@ package com.example.f1simulator;
 public class Piloto {
 
     String nome;
-    double orcamento;
-    int nivel;
-    String website;
-    String foto;
     int numero;
+    String nacionalidade;
+    int idade;
+    double valor;
+    String email;
+    String foto;
 
     public Piloto() {
         nome = "";
-        orcamento = 0;
-        nivel = 0;
-        website = "";
+        numero = 0;
+        idade = 0;
+        nacionalidade = "";
         foto = "";
         numero = 0;
+        valor = 0;
+        email = "";
     }
 
-    public Piloto(String nome, double orcamento, int nivel, String website, String foto) {
+    public Piloto(String nome, int numero, String nacionalidade, int idade, double valor, String email, String foto) {
         this.nome = nome;
-        this.orcamento = orcamento;
-        this.nivel = nivel;
-        this.website = website;
-        this.foto = foto;
-        numero = 0;
-    }
-
-    public Piloto(String nome, double orcamento, int nivel, String website, String foto, int numero) {
-        this.nome = nome;
-        this.orcamento = orcamento;
-        this.nivel = nivel;
-        this.website = website;
-        this.foto = foto;
         this.numero = numero;
+        this.nacionalidade = nacionalidade;
+        this.idade = idade;
+        this.valor = valor;
+        this.email = email;
+        this.foto = foto;
     }
 
     public String getNome() {
@@ -44,28 +39,44 @@ public class Piloto {
         this.nome = nome;
     }
 
-    public double getOrcamento() {
-        return orcamento;
+    public int getNumero() {
+        return numero;
     }
 
-    public void setOrcamento(double orcamento) {
-        this.orcamento = orcamento;
+    public void setNumero(int numero) {
+        this.numero = numero;
     }
 
-    public int getNivel() {
-        return nivel;
+    public String getNacionalidade() {
+        return nacionalidade;
     }
 
-    public void setNivel(int nivel) {
-        this.nivel = nivel;
+    public void setNacionalidade(String nacionalidade) {
+        this.nacionalidade = nacionalidade;
     }
 
-    public String getWebsite() {
-        return website;
+    public int getIdade() {
+        return idade;
     }
 
-    public void setWebsite(String website) {
-        this.website = website;
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getFoto() {
@@ -75,14 +86,4 @@ public class Piloto {
     public void setFoto(String foto) {
         this.foto = foto;
     }
-
-    public int getNumero() {
-        return numero;
-    }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
-
-
 }

@@ -9,4 +9,6 @@
     <string name="equipa">Equipa</string>
     <string name="circuito">Circuito</string>
     <string name="simulador">Simulador</string>
+    <string name="editar">Editar</string>
+    <string name="eliminar">Eliminar</string>
 </resources>

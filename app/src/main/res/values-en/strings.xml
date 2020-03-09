@@ -10,4 +10,6 @@
     <string name="equipa">Team</string>
     <string name="circuito">Race</string>
     <string name="simulador">Simulator</string>
+    <string name="editar">Edit</string>
+    <string name="eliminar">Delete</string>
 </resources>
