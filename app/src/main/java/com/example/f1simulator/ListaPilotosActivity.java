@@ -32,7 +32,7 @@ public class ListaPilotosActivity extends AppCompatActivity {
                 Piloto piloto = documentSnapshot.toObject(Piloto.class);
                 String path = documentSnapshot.getReference().getPath();
 
-                Toast.makeText(ListaPilotosActivity.this, path, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(ListaPilotosActivity.this, path, Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(ListaPilotosActivity.this, DadosPilotoActivity.class);
                 i.putExtra("path", path);
                 startActivity(i);

@@ -13,63 +13,153 @@
         android:layout_height="200dp"
         android:layout_gravity="center" />
 
-    <EditText
-        android:id="@+id/et_dadosPiloto_nome"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:enabled="false"
-        android:gravity="center"
-        android:hint="Nome do piloto" />
+        android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/et_dadosPiloto_numero"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:enabled="false"
-        android:gravity="center"
-        android:hint="Número do piloto"
-        android:inputType="number" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5sp"
+            android:layout_marginLeft="5sp"
+            android:layout_weight="1"
+            android:text="Nome:" />
 
-
-    <EditText
-        android:id="@+id/et_dadosPiloto_nacionalidade"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:enabled="false"
-        android:gravity="center"
-        android:hint="Nacionalidade do piloto" />
-
-
-    <EditText
-        android:id="@+id/et_dadosPiloto_idade"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:enabled="false"
-        android:gravity="center"
-        android:hint="Idade do piloto"
-        android:inputType="number" />
-
-
-    <EditText
-        android:id="@+id/et_dadosPiloto_valor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:enabled="false"
-        android:gravity="center"
-        android:hint="Valor do piloto"
-        android:inputType="numberDecimal" />
-
-
-    <EditText
-        android:id="@+id/et_dadosPiloto_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:enabled="false"
-        android:gravity="center"
-        android:hint="Email do piloto"
-        android:inputType="textEmailAddress" />
+        <EditText
+            android:id="@+id/et_dadosPiloto_nome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:enabled="false"
+            android:gravity="center"
+            android:hint="Nome do piloto" />
+    </LinearLayout>
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5sp"
+            android:layout_marginLeft="5sp"
+            android:layout_weight="1"
+            android:text="Número:" />
+
+        <EditText
+            android:id="@+id/et_dadosPiloto_numero"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:enabled="false"
+            android:gravity="center"
+            android:hint="Número do piloto"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5sp"
+            android:layout_marginLeft="5sp"
+            android:layout_weight="1"
+            android:text="Nacionalidade:" />
+
+        <EditText
+            android:id="@+id/et_dadosPiloto_nacionalidade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:enabled="false"
+            android:gravity="center"
+            android:hint="Nacionalidade do piloto" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5sp"
+            android:layout_marginLeft="5sp"
+            android:layout_weight="1"
+            android:text="Idade:" />
+
+
+        <EditText
+            android:id="@+id/et_dadosPiloto_idade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:enabled="false"
+            android:gravity="center"
+            android:hint="Idade do piloto"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5sp"
+            android:layout_marginLeft="5sp"
+            android:layout_weight="1"
+            android:text="Valor:" />
+
+        <EditText
+            android:id="@+id/et_dadosPiloto_valor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:enabled="false"
+            android:gravity="center"
+            android:hint="Valor do piloto"
+            android:inputType="numberDecimal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5sp"
+            android:layout_marginLeft="5sp"
+            android:layout_weight="1"
+            android:text="Email:" />
+
+        <EditText
+            android:id="@+id/et_dadosPiloto_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:enabled="false"
+            android:gravity="center"
+            android:hint="Email do piloto"
+            android:inputType="textEmailAddress" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bts_editar_eliminar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -88,6 +178,29 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:text="@string/eliminar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bts_cancelar_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/bt_dadosPiloto_cancelar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Cancelar" />
+
+        <Button
+            android:id="@+id/bt_dadosPiloto_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="OK" />
     </LinearLayout>
 
 </LinearLayout>
