@@ -23,6 +23,9 @@ public class DadosPilotoActivity extends AppCompatActivity {
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     Intent i;
     private ViewHolder viewHolder = new ViewHolder();
+    String id = "";
+    DocumentReference docRef;
+    String nome, numero, nacionalidade, idade, valor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,51 +46,70 @@ public class DadosPilotoActivity extends AppCompatActivity {
         viewHolder.ll_bts_cancelar_ok = findViewById(R.id.ll_bts_cancelar_ok);
         viewHolder.ll_bts_editar_eliminar = findViewById(R.id.ll_bts_editar_eliminar);
 
-
         viewHolder.bt_dadosPiloto_editar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 viewHolder.ll_bts_editar_eliminar.setVisibility(View.GONE);
                 viewHolder.ll_bts_cancelar_ok.setVisibility(View.VISIBLE);
                 CamposEditaveis();
+                nome = viewHolder.et_dadosPiloto_nome.getText().toString();
+                numero = viewHolder.et_dadosPiloto_numero.getText().toString();
+                nacionalidade = viewHolder.et_dadosPiloto_nacionalidade.getText().toString();
+                idade = viewHolder.et_dadosPiloto_idade.getText().toString();
+                valor = viewHolder.et_dadosPiloto_valor.getText().toString();
             }
         });
+
         viewHolder.bt_dadosPiloto_eliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                docRef.delete();
+                finish();
             }
         });
+
         viewHolder.bt_dadosPiloto_ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 viewHolder.ll_bts_editar_eliminar.setVisibility(View.VISIBLE);
                 viewHolder.ll_bts_cancelar_ok.setVisibility(View.GONE);
                 CamposNaoEditaveis();
+                docRef.update("nome", viewHolder.et_dadosPiloto_nome.getText().toString());
+                docRef.update("email", viewHolder.et_dadosPiloto_email.getText().toString());
+                docRef.update("idade", Integer.parseInt(viewHolder.et_dadosPiloto_idade.getText().toString()));
+                docRef.update("nacionalidade", viewHolder.et_dadosPiloto_nacionalidade.getText().toString());
+                docRef.update("valor", Double.parseDouble(viewHolder.et_dadosPiloto_valor.getText().toString()));
+                docRef.update("numero", Integer.parseInt(viewHolder.et_dadosPiloto_numero.getText().toString()));
             }
         });
+
         viewHolder.bt_dadosPiloto_cancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 viewHolder.ll_bts_editar_eliminar.setVisibility(View.VISIBLE);
                 viewHolder.ll_bts_cancelar_ok.setVisibility(View.GONE);
                 CamposNaoEditaveis();
+                viewHolder.et_dadosPiloto_nome.setText(nome);
+                viewHolder.et_dadosPiloto_numero.setText(numero);
+                viewHolder.et_dadosPiloto_nacionalidade.setText(nacionalidade);
+                viewHolder.et_dadosPiloto_idade.setText(idade);
+                viewHolder.et_dadosPiloto_valor.setText(valor);
             }
         });
 
 
         i = getIntent();
         String path = i.getExtras().getString("path");
-        String id = path.substring(path.indexOf('/') + 1);
+        id = path.substring(path.indexOf('/') + 1);
 
-        DocumentReference docRef = db.collection("Piloto").document(id);
+        docRef = db.collection("Piloto").document(id);
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if (task.isSuccessful()) {
                     DocumentSnapshot documentSnapshot = task.getResult();
                     if (documentSnapshot.exists()) {
-                        Toast.makeText(DadosPilotoActivity.this, "Dados lidos com sucesso", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(DadosPilotoActivity.this, "Dados lidos com sucesso", Toast.LENGTH_SHORT).show();
                         viewHolder.et_dadosPiloto_nome.setText(documentSnapshot.getData().get("nome").toString());
                         String nome = documentSnapshot.getData().get("nome").toString();
                         nome = nome.replace(" ", "");
