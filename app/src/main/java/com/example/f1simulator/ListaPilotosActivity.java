@@ -6,9 +6,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -18,12 +21,13 @@ public class ListaPilotosActivity extends AppCompatActivity {
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private CollectionReference pilotoRef = db.collection("Piloto");
     private PilotoAdapter adapter;
+    private FloatingActionButton bt_listaPilotos_add;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_pilotos);
-
+        bt_listaPilotos_add = findViewById(R.id.bt_listaPilotos_add);
         setUpRecyclerView();
 
         adapter.setOnItemClickListener(new PilotoAdapter.OnItemClickListener() {
@@ -35,6 +39,15 @@ public class ListaPilotosActivity extends AppCompatActivity {
                 //Toast.makeText(ListaPilotosActivity.this, path, Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(ListaPilotosActivity.this, DadosPilotoActivity.class);
                 i.putExtra("path", path);
+                startActivity(i);
+            }
+        });
+
+
+        bt_listaPilotos_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ListaPilotosActivity.this, NovoPilotoActivity.class);
                 startActivity(i);
             }
         });

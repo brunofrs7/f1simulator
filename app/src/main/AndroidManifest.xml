@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/logo_novo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DadosPilotoActivity"></activity>
+        <activity android:name=".NovoPilotoActivity"></activity>
+        <activity android:name=".DadosPilotoActivity" />
         <activity android:name=".ListaPilotosActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".RegistoActivity" />

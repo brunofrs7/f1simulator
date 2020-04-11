@@ -9,6 +9,7 @@ public class Piloto {
     double valor;
     String email;
     String foto;
+    String equipa;
 
     public Piloto() {
         nome = "";
@@ -29,6 +30,15 @@ public class Piloto {
         this.valor = valor;
         this.email = email;
         this.foto = foto;
+    }
+
+    public Piloto(String nome, int numero, String nacionalidade, int idade, double valor, String equipa) {
+        this.nome = nome;
+        this.numero = numero;
+        this.nacionalidade = nacionalidade;
+        this.idade = idade;
+        this.valor = valor;
+        this.equipa = equipa;
     }
 
     public String getNome() {
@@ -86,4 +96,13 @@ public class Piloto {
     public void setFoto(String foto) {
         this.foto = foto;
     }
+
+    public String getEquipa() {
+        return equipa;
+    }
+
+    public void setEquipa(String equipa) {
+        this.equipa = equipa;
+    }
+
 }
