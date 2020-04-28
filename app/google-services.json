@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "9778172396",
+    "firebase_url": "https://f1simulator-b96f8.firebaseio.com",
+    "project_id": "f1simulator-b96f8",
+    "storage_bucket": "f1simulator-b96f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:9778172396:android:b0e3c0f90f8567cde730c9",
+        "android_client_info": {
+          "package_name": "com.example.f1simulator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "9778172396-ol14657qs76b47se61eiiug5ghhbav61.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.f1simulator",
+            "certificate_hash": "348b232c5958e3fd09946a797be83ea7bb81fb47"
+          }
+        },
+        {
+          "client_id": "9778172396-t9dh4k5ttrqudsiqe78g2goc0722ub5e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfMLc87CPt8oOLDKF7byb5lJIk5CvJ-DM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "9778172396-t9dh4k5ttrqudsiqe78g2goc0722ub5e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
