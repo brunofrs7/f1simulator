@@ -144,6 +144,31 @@
             android:layout_marginStart="5sp"
             android:layout_marginLeft="5sp"
             android:layout_weight="1"
+            android:text="Equipa:" />
+
+        <EditText
+            android:id="@+id/et_dadosPiloto_equipa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:enabled="false"
+            android:gravity="center"
+            android:hint="Equipa do piloto"
+            android:inputType="textEmailAddress" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5sp"
+            android:layout_marginLeft="5sp"
+            android:layout_weight="1"
             android:text="Email:" />
 
         <EditText
@@ -157,6 +182,11 @@
             android:inputType="textEmailAddress" />
 
     </LinearLayout>
+    <Button
+        android:id="@+id/bt_dadosPiloto_enviarEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enviar email"/>
 
     <LinearLayout
         android:id="@+id/ll_bts_editar_eliminar"

@@ -87,8 +87,6 @@ public class NovoPilotoActivity extends AppCompatActivity {
                 email = mViewHolder.et_email.getText().toString();
                 foto = "";
 
-                //IMAGEM
-
                 if (uploadTask != null && uploadTask.isInProgress()) {
                     Toast.makeText(NovoPilotoActivity.this, "Imagem em upload, aguarde", Toast.LENGTH_SHORT).show();
                 } else {
@@ -153,9 +151,7 @@ public class NovoPilotoActivity extends AppCompatActivity {
         if (requestCode == PICK_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
             uri_imagem = data.getData();
             Picasso.get().load(uri_imagem).into(mViewHolder.iv_foto);
-
         }
-
     }
 
     private static class ViewHolder {
