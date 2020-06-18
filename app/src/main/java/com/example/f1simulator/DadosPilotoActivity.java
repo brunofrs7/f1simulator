@@ -134,10 +134,12 @@ public class DadosPilotoActivity extends AppCompatActivity {
                     i.setType("image/*");
                     i.setAction(Intent.ACTION_GET_CONTENT);
                     startActivityForResult(i, PICK_REQUEST);
+                }else{
+                    Intent i = new Intent(DadosPilotoActivity.this,ListaImagensPilotoActivity.class);
+                    startActivity(i);
                 }
             }
         });
-
 
         i = getIntent();
         String path = i.getExtras().getString("path");
